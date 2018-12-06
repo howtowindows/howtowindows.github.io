@@ -21,7 +21,8 @@
         
         body {
             background-color: #ff0080;
-            font-size: 125%
+            font-size: 125%;
+            text-rendering: optimizeLegibility
         }
         
         .text {
@@ -41,7 +42,7 @@
         }
         
         a {
-            text-decoration: none
+            text-decoration: underline
         }
         
         code {
@@ -78,7 +79,7 @@
                 <li><a href="#7">Recommendations</a></li>
         </ol>
         <h2 id="2">Backing up</h2>
-        <p>Get 7-Zip from <a href="https://github.com/mcmilk/7-Zip-zstd/releases">here</a>, or if you're from far in the future, then you can maybe also get it from <a href="https://www.7-zip.org/download.html">here.</a> Go to <b>This PC</b> or My Computer or something depending on language and Windows version, and right-click your <code>C:\</code> drive. Choose <b>7-Zip (Zstandard)→Add to archive…</b>. You can choose from uncompressed, and compressed, depending on your free disk space and how often you think you will be coming back to your backup. I recommend going for uncompressed for now. Set the target location on a secondary drive with enough storage for your backup, and set the settings like so:</p><img src="21-backup.png">
+        <p>Get 7-Zip from <a href="https://github.com/mcmilk/7-Zip-zstd/releases">here</a>, or if you're from far in the future, then you can maybe also get it from <a href="https://www.7-zip.org/download.html">here</a>. Go to <b>This PC</b> or My Computer or something depending on language and Windows version, and right-click your <code>C:\</code> drive. Choose <b>7-Zip (Zstandard)→Add to archive…</b>. You can choose from uncompressed, and compressed, depending on your free disk space and how often you think you will be coming back to your backup. I recommend going for uncompressed for now. Set the target location on a secondary drive with enough storage for your backup, and set the settings like so:</p><img src="21-backup.png">
         <p>Or if you want to have compression, set it like so:</p><img src="22-backupcompressed.png">
         <h2 id="3">Getting drivers & Windows</h2>
         <p>Download SDI to your secondary drive using <a href="http://sdi-tool.org/SDI_Update.torrent" </a>this torrent</a>. And obtain a copy of Windows 10 LTSC 2019. The screenshots in here will be using <code>SW_DVD5_WIN_ENT_LTSC_2019_64-bit_English_International_MLF_X21-96427.ISO</code>, your language might differ. Now get Rufus from <a href="https://rufus.ie/">here</a>, and plug in a USB flash drive. Open Rufus, select your copy of Windows, and choose the settings like following (note: if you use a smaller drive, then "Cluster size" might be different) and hit start:</p><img src="23-rufus.png">
@@ -95,7 +96,7 @@
         <h2 id="7">Recommendations</h2>
         <p>Let's go get some extra essentials and spruce Windows up! Download <a href="Disable_Lock_Screen.reg">Disable_Lock_Screen.reg</a> and <a href="Restore_Windows_Photo_Viewer_ALL_USERS.reg">Restore_Windows_Photo_Viewer_ALL_USERS.reg</a> and launch them, then merge them. Download <a href="vcredist_x86.exe">vcredist_x86.exe</a> and install it. Go to your <code>C:\</code> drive and create a new folder called <code>Path</code> there. Open the <b>Start</b> menu and type <code>SystemPropertiesAdvanced.exe</code>, click <b>Environment Variables…</b>, navigate to the <b>Path</b> like in the image below, choose <b>Edit…</b>, in the next window select <b>New</b>, then add <code>C:\Path</code> to the list like in the second image below.</p><img src="25-environment.png"><img src="26-path.png">
         <p>Get the <a href="path.exe">path.exe</a> file and extract it into the <code>C:\Path</code> folder. Double-click <code>mpvbootstrap.bat</code> from inside there, get all the things, then in the new <code>C:\Path\installer</code> folder, right-click <code>mpv-install.bat</code> and <b>Run as administrator</b>.</p>
-        <p>Go back to the <b>Settings</b> app. Rapid fire through the following things: (if you want to disable mouse acceleration: <b>Devices→Mouse→Related settings→Additional mouse options→Pointer Options→Enhance pointer precision</b> and uncheck that) <b>Personalisation→Lock screen→Off</b> and have fun with all the colours, <b>Apps→Default apps→Music player: mpv;Video player: mpv</b>, <b>Apps->Start-up→Disable all</b>, <b>Date & time→On</b>.</p><img src="19-off.png"><img src="18-colours.png"><img src="24-start-up.png"><img src="20-timezone.png">
+        <p>Go back to the <b>Settings</b> app. Rapid fire through the following things: (if you want to disable mouse acceleration: <b>Devices→Mouse→Related settings→Additional mouse options→Pointer Options→Enhance pointer precision</b> and uncheck that) <b>Personalisation→Lock screen→Off</b> and have fun with all the colours, <b>Apps→Default apps→Photo viewer: Photo viewer;Music player: mpv;Video player: mpv</b>, <b>Apps->Start-up→Disable all</b>, <b>Date & time→On</b>.</p><img src="19-off.png"><img src="18-colours.png"><img src="24-start-up.png"><img src="20-timezone.png">
         <p>If you use Firefox, then you can transfer your browser profile from your backup, to the new installation. It's easy! Get 7-Zip again, install it, then on your secondary drive open the backup you made. Go to <code>C:\Users\username\AppData\Roaming</code> and extract your <b>Mozilla</b> folder to the same location on your new installation. Do the same for the <b>Mozilla</b> folder in <code>C:\Users\username\AppData\Local</code>, then <a href="https://www.mozilla.org/firefox/">get Firefox</a> and it's like you never changed anything!</p>
     </div>
 </body>
